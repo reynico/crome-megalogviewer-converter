@@ -6,7 +6,7 @@ root = Tkinter.Tk()
 root.filename = tkFileDialog.askopenfilename(title = "Select file",filetypes = (("datalog files","*.csv"),("all files","*.*")))
 
 # Remove double quotes
-writer = csv.writer(open("edited-"+os.path.basename(root.filename), "wb"), quoting=csv.QUOTE_NONE)
+writer = csv.writer(open(os.path.dirname(root.filename)+"/edited-"+os.path.basename(root.filename), "wb"), quoting=csv.QUOTE_NONE)
 reader = csv.reader(open((root.filename), "rb"), skipinitialspace=True)
 reader.next()
 writer.writerow(["Time","Engine Speed (RPM)","Vehicle Speed (Kmh)","Gear","Manifold Pressure (mbar)","Boost (psi)","Throttle Position (%)","Injector Duration (ms)","Duty Cycle (%)","Ignition Advance","Knock Retard","Air Temperature (C)","Coolant Temperature (C)","O2 Voltage","Lambda","Air Fuel Ratio","VTEC","CEL"])
