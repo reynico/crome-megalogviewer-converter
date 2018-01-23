@@ -2,7 +2,7 @@
 This Python script converts Crome datalog files (csv) to Megalogviewer csv-friendly datalog files
 It replaces double quotes, as well as the file header. It also convert imperial to metric units
 
-![Crome datalog example using Megalogviewer](https://github.com/reynico/crome-megalogviewer-converter/example.png)
+![Crome datalog example using Megalogviewer](https://github.com/reynico/crome-megalogviewer-converter/raw/master/example.png)
 
 ### Steps
 - Open a .dlf datalog with Crome
