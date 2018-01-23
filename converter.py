@@ -6,7 +6,6 @@ writer = csv.writer(open("edited-"+sys.argv[1], "wb"), quoting=csv.QUOTE_NONE)
 reader = csv.reader(open(sys.argv[1], "rb"), skipinitialspace=True)
 reader.next()
 writer.writerow(["Time","Engine Speed (RPM)","Vehicle Speed (Kmh)","Gear","Manifold Pressure (mbar)","Boost (psi)","Throttle Position (%)","Injector Duration (ms)","Duty Cycle (%)","Ignition Advance","Knock Retard","Air Temperature (C)","Coolant Temperature (C)","O2 Voltage","Lambda","Air Fuel Ratio","VTEC","CEL"])
-flag=1
 for row in reader:
 	# Speed Mph to Kmh
 	row[2] = str(round((float(row[2]) * 1.6),2))
